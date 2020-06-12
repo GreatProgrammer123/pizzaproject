@@ -7,11 +7,11 @@ html, body {
 body {
   margin: 0;
   font-family: 'Roboto Condensed', sans-serif;
-  background: #FFF0CD;
+  background: #EFE9DD;
 }
 
 .contentelemback {
-  background: #E7DBC4;
+  background: #ECD8B1;
 }
 
 
@@ -31,7 +31,7 @@ body {
   padding-top: 35px;
   padding-bottom: 10px;
   border-radius: 30px;
-  background: #FFF0CD;
+  background: #EFE9DD;
 }
 
 .subttlemain {
@@ -93,7 +93,7 @@ body {
   transition-duration: 300ms;
   border-radius: 10px;
   font-family: 'Capriola', sans-serif;
-  background: #E2DBCD;
+  background: #B5CEDE;
 }
 
   .btnmain:hover {

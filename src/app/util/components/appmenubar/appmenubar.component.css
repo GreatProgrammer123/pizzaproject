@@ -13,12 +13,12 @@
 }
 
 .menuopacited {
-  background-color: rgba(245,232,190,0.1);
+  background-color: rgba(236,216,177,0.1);
   transition-duration: 300ms;
 }
 
 .menumoved {
-  background-color: rgba(245,232,190,1);
+  background-color: rgba(236,216,177,1);
   transition-duration: 300ms;
 }
 
