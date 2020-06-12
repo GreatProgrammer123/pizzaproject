@@ -1,0 +1,31 @@
+<div class="wrapper">
+  <mat-form-field class="example-full-width maininp">
+    <input type="text" placeholder="nazwa" aria-label="nazwa" matInput
+           [(ngModel)]="pizza.name">
+  </mat-form-field>
+  <br />
+
+  <mat-form-field class="example-full-width maininp">
+    <input type="text" placeholder="lista składników" aria-label="lista składników" matInput
+           [(ngModel)]="pizza.ingredients">
+  </mat-form-field>
+  <br />
+
+  <mat-form-field class="example-full-width maininp">
+    <mat-label>Opis</mat-label>
+    <textarea matInput [(ngModel)]="pizza.description"></textarea>
+  </mat-form-field>
+
+  <p class="minititlemain">Dostepne rozmiary</p>
+  <button (click)="addsizeprice()" class="btnmain">Dodaj rozmiar</button>
+  <div class="sizepwrapper">
+    <ng-container *ngFor="let sizeprice of pizza.availablesizes">
+      <app-displaysizepriceeditable [sizeprice]="sizeprice" (remove)="removesizep($event)" class="sizep"></app-displaysizepriceeditable>
+    </ng-container>
+  </div>
+  <br />
+  <button (click)="save()"  class="btnmain btnsave">Zapisz</button>
+  <p *ngIf="servres" class="servres">{{servres}}</p>
+  <br />
+  <button (click)="removepizza()"  class="btnmain btnsave">Usuń</button>
+</div>

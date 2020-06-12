@@ -1,0 +1,9 @@
+<app-appmenubar></app-appmenubar>
+<div style="overflow:hidden;">
+  <div class="contentwrapper elemspanel todown withentryanim">
+    <ng-container *ngFor="let order of orders">
+      <app-orderinlist [order]="order"></app-orderinlist>
+    </ng-container>
+  </div>
+  <div class="fullscreenback backimg backimgfixed"> </div>
+</div>

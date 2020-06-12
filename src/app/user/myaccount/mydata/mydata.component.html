@@ -1,0 +1,37 @@
+<app-appmenubar></app-appmenubar>
+<div style="overflow:hidden;">
+  <div class="contentwrapper elemspanel todown withentryanim">
+    <div class="wrap">
+      <p class="subttlemain subttlemainsmaller">Moje dane</p>
+      <mat-form-field class="example-full-width maininp">
+        <input type="text" placeholder="email" aria-label="email" matInput
+               [(ngModel)]="user.email">
+      </mat-form-field>
+      <br />
+      <mat-form-field class="example-full-width maininp">
+        <input type="password" placeholder="hasło" aria-label="hasło" matInput
+               [(ngModel)]="user.password">
+      </mat-form-field>
+      <br />
+      <p class="minititlemain">Adres do dostawy</p>
+      <mat-form-field class="example-full-width maininp">
+        <input type="text" placeholder="ulica i numer" aria-label="ulica i numer" matInput
+               [(ngModel)]="user.address.street">
+      </mat-form-field>
+      <br />
+      <mat-form-field class="example-full-width maininp">
+        <input type="text" placeholder="kod pocztowy" aria-label="kod pocztowy" matInput
+               [(ngModel)]="user.address.postcode">
+      </mat-form-field>
+      <br />
+      <mat-form-field class="example-full-width maininp">
+        <input type="text" placeholder="miasto" aria-label="miasto" matInput
+               [(ngModel)]="user.address.city">
+      </mat-form-field>
+      <br />
+      <button (click)="savechanges()" class="btnmain bregister">Zapisz zmainy</button>
+      <p *ngIf="servres" class="servres">{{servres}}</p>
+    </div>
+  </div>
+    <div class="fullscreenback backimg backimgfixed"> </div>
+  </div>

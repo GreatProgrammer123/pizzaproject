@@ -1,0 +1,20 @@
+<div class="wrapper">
+  <mat-form-field class="example-full-width maininp">
+    <input type="text" placeholder="nazwa" aria-label="nazwa" matInput
+           [(ngModel)]="drink.name">
+  </mat-form-field>
+  <br />
+  <mat-form-field class="example-full-width maininp">
+    <input type="number" placeholder="objętość" aria-label="objętość" matInput
+           [(ngModel)]="drink.volume">
+  </mat-form-field>
+  <br />
+  <mat-form-field class="example-full-width maininp">
+    <input type="number" placeholder="cena" aria-label="cena" matInput
+           [(ngModel)]="drink.price">
+  </mat-form-field>
+  <br />
+  <button (click)="save()" class="btnmain bsave">Zapisz</button>
+  <button (click)="remove()" class="btnmain bsave">Usuń</button>
+  <p *ngIf="servres" class="servres">{{servres}}</p>
+</div>

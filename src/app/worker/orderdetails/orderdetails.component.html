@@ -1,0 +1,41 @@
+<div *ngIf="order" class="contentwrapper">
+  <p class="infplabel">Id zamówienia: <span class="infpval">{{order.orderid}}</span></p>
+  <p class="subttlemain subttlemainsmaller titlesmth">Pizze</p>
+  <div class="contentsmargin">
+    <ng-container *ngFor="let pizza of order.pizzas">
+<app-displaypizzaorder [pizzaorder]="pizza"></app-displaypizzaorder>
+    </ng-container>
+  </div>
+  <p class="subttlemain subttlemainsmaller titlesmth">Picie</p>
+  <div  class="contentsmargin">
+    <ng-container *ngFor="let drink of order.drinks">
+      <app-displaydrinkorder [drinkorder]="drink"></app-displaydrinkorder>
+    </ng-container>
+  </div>
+  <p class="subttlemain subttlemainsmaller titlesmth ">Inne dodatki</p>
+  <div  class="contentsmargin">
+   <ng-container *ngFor="let toping of order.othertopings">
+     <app-displaytopingorder [topingorder]="toping"></app-displaytopingorder>
+    </ng-container>
+  </div>
+   
+  <p class="subttlemain subttlemainsmaller titlesmth">Płatność</p>
+  <div class="contentsmargin">
+    <div class="infowrap contentelemback">
+      <p class="infplabel">Suma: <span class="infpval">{{order.payment.amount}}zł</span></p>
+      <p *ngIf="order.ispayingincash" class="infplabel">Klient zapłaci przy odbiorze</p>
+      <p *ngIf="!order.ispayingincash" class="infplabel">Klient zapłacił online</p>
+    </div>
+    <button *ngIf="!order.eathere" (click)="showdeladr=!showdeladr" class="btnmain">Pokaż adres dostawy</button> <br />
+    <p *ngIf="order.eathere">Klient odbierze w lokalu</p>
+    <div  *ngIf="showdeladr" class="infowrap contentelemback ">
+      <app-displayaddresss [address]="order.deliveryaddres">
+
+      </app-displayaddresss>
+    </div>
+
+      <button *ngIf="order.state===1" (click)="changeorderstate(2)" class="btnmain bnextmain btnchngs">Przyjmij do realizacji</button>
+      <button *ngIf="order.state===2" (click)="changeorderstate(3)" class="btnmain bnextmain btnchngs">Oznacz jako zrealizowane</button>
+      <p *ngIf="servres" class="servres">{{servres}}</p>
+    </div>
+  </div>

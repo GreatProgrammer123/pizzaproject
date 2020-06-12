@@ -1,0 +1,12 @@
+.wrapper {
+  padding: 1%;
+  border-radius: 15px;
+  padding-left: 10%;
+  margin-top:15px;
+  border-style: solid;
+}
+
+.btnsave{
+  width:80%;
+  margin-top:15px;
+}

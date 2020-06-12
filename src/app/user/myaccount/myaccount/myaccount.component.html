@@ -1,0 +1,9 @@
+<app-appmenubar></app-appmenubar>
+<div style="overflow:hidden;">
+  <div class="contentwrapper elemspanel todown withentryanim">
+    <button [routerLink]="['/mydata']" class="btnmain abtn">Moje dane</button>
+    <button [routerLink]="['/myorders']" class="btnmain abtn">Moje zamówienia</button>
+    <button (click)="userserv.logut()" class="btnmain abtn">Wyloguj się</button>
+  </div>
+  <div class="fullscreenback backimg backimgfixed"> </div>
+</div>

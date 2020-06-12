@@ -1,0 +1,12 @@
+<div *ngIf="openhours" class="contentwrapper">
+  <p class="subttlemain ">Godziny otwarcia</p>
+  <div class="contentsmargin">
+    <button (click)="addnewopenhours()" class="btnmain btnaddd">Dodaj</button>
+    <p *ngIf="ohmsg" class="servres">{{ohmsg}}</p>
+    <div>
+      <ng-container *ngFor="let oh of openhours">
+        <app-openhourseditable [openhours]="oh" (saved)="saved($event)" (removeopenhours)="removeopenhours($event)"></app-openhourseditable>
+      </ng-container>
+    </div>
+  </div>
+</div>

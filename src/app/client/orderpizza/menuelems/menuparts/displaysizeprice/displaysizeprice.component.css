@@ -1,0 +1,77 @@
+.wrapper {
+  width: 100%;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+  transition-duration:300ms;
+  border-radius:15px;
+  padding:2%;
+}
+
+  .wrapper:hover {
+    padding: 1%;
+    cursor: pointer;
+    transition-duration: 300ms;
+  }
+
+.ap {
+  display: inline-block;
+ vertical-align:middle;
+ margin:0;
+ font-size:1vw;
+}
+
+.name {
+  font-size: 1.1vw;
+  font-family: 'Capriola', sans-serif;
+}
+
+.apnum{
+  font-size:1vw;
+}
+
+@media screen and (max-width: 500px) {
+
+  .wrapper {
+    border-radius: 15px;
+    padding: 2%;
+  }
+
+  .ap {
+    font-size: 3vw;
+  }
+
+  .name {
+    font-size: 3.1vw;
+   
+  }
+
+  .apnum {
+    font-size: 3vw;
+  }
+
+}
+
+@media screen and (min-width: 500px) and (max-width: 1000px) {
+
+  .wrapper {
+    border-radius: 15px;
+    padding: 2%;
+  }
+
+  .ap {
+    font-size: 2.5vw;
+  }
+
+  .name {
+    font-size: 2.8vw;
+  }
+
+  .apnum {
+    font-size: 2.6vw;
+  }
+}
+

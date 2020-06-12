@@ -1,0 +1,47 @@
+.wrapper{
+  padding:1.5%;
+  padding-left:10%;
+  border-radius:15px;
+  margin-top:15px;
+  border-style:solid;
+}
+
+.sizepwrapper {
+  display: inline-flex;
+  flex-wrap: wrap;
+  width: 90%;
+  margin-top:15px;
+  margin-bottom:15px;
+}
+
+.sizep{
+width:20%;
+margin-left:1.5%;
+margin-right:1.5%;
+}
+
+.btnsave {
+  width:90%;
+  margin-top: 10px;
+}
+
+
+@media screen and (max-width: 500px) {
+
+
+  .sizep {
+    width: 47%;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    margin-top: 5px;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 1000px) {
+  .sizep {
+    width: 47%;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    margin-top: 5px;
+  }
+}

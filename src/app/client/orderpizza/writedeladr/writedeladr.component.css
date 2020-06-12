@@ -1,0 +1,72 @@
+.wrap{
+
+}
+.chkb {
+  width: 100%;
+  font-size: 1.2vw;
+  padding-top: 25px;
+  margin-bottom: 15px;
+}
+
+.radioadrbtn{
+  font-size:1vw;
+  padding:1%;
+}
+
+.btnnextprev{
+  display:inline-block;
+  width:22%;
+  margin-left:1%;
+  margin-right:1%;
+}
+
+@media screen and (max-width: 500px) {
+  .wrap {
+    margin-left:10%;
+  }
+
+  .chkb {
+    width: 100%;
+    font-size: 3.2vw;
+    padding-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .radioadrbtn {
+    font-size: 3vw;
+    padding: 1%;
+  }
+
+  .btnnextprev {
+    display: inline-block;
+    width: 45%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+  }
+
+}
+
+@media screen and (min-width: 500px) and (max-width: 1000px) {
+  .wrap {
+    margin-left: 10%;
+  }
+
+  .chkb {
+    width: 100%;
+    font-size: 2.8vw;
+    padding-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .radioadrbtn {
+    font-size: 2.6vw;
+    padding: 1%;
+  }
+
+  .btnnextprev {
+    display: inline-block;
+    width: 45%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+  }
+}

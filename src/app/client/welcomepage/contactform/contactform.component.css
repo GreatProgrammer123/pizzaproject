@@ -1,0 +1,27 @@
+.wrap{
+  padding:2%;
+  border-radius:25px;
+}
+
+.inpsend{
+  width:100%;
+}
+
+.inpcontent{
+  min-height:150px;
+}
+
+
+@media screen and (max-width: 500px) {
+  .inpsend {
+    width: 100%;
+  }
+
+  .inpcontent {
+    min-height: 50px;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 1000px) {
+
+}

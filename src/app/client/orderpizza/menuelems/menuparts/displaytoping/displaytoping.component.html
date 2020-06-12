@@ -1,0 +1,12 @@
+<div class="wrapper" [ngClass]="insideotherelem?'contentelembackbright':'contentelemback'">
+  <p class="minititlemain tpp">{{toping.name}}</p>
+  &nbsp;
+  <p class="desc atext">{{toping.description}}</p>
+  &nbsp;
+  <mat-form-field class="example-full-width tpp maininp numinpmain">
+    <input type="number" placeholder="Ilość" aria-label="Ilość" matInput
+           [(ngModel)]="topingorder.count" (ngModelChange)="changedcount()">
+  </mat-form-field>
+  &nbsp;
+  <p class="numpmain tpp">{{topingorder.cost}}zł</p>
+</div>

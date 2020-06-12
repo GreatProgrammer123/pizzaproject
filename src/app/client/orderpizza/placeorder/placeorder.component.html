@@ -1,0 +1,33 @@
+
+<app-appmenubar></app-appmenubar>
+<div style="overflow:hidden;">
+  <div class="contentwrapper elemspanel todown withentryanim">
+    <div class="wrap">
+      <p class="subttlemain subttlemainsmaller">Podsumowanie</p>
+      <div class="contentsmargin">
+
+        <p class=" topayp">Do zapłaty: <span class="numpmain">{{orderserv.calctotalcost()}}zł</span></p>
+
+        <mat-radio-group aria-label="Select an option">
+          <mat-radio-button [value]="false" [checked]="orderserv.order.ispayingincash==false" (click)="orderserv.order.ispayingincash=false" class="radioadrbtnpay">Zapłacę online</mat-radio-button>
+          <mat-radio-button [value]="true" [checked]="orderserv.order.ispayingincash==true" (click)="orderserv.order.ispayingincash=true" class="radioadrbtnpay">Zapłacę przy odbiorze</mat-radio-button>
+        </mat-radio-group>
+        <br />
+        <button id="orderbtn" (click)="order()" class="btnmain btnorderpay">Zamów</button>
+        <mat-spinner *ngIf="showwait&&!orderserv.orderres" class="waiterspinner" [diameter]="70"></mat-spinner>
+
+        <div *ngIf="orderserv.orderres">
+          <div *ngIf="orderserv.orderres.success">
+            <p class="servres">Przyjęto zamówienie</p>
+            <button *ngIf="orderserv.order.ispayingincash" [routerLink]="''" class="btnmain btnorderpay">Wróć do storny głównej</button>
+            <button (click)="pay()" *ngIf="!orderserv.order.ispayingincash" class="btnmain btnorderpay">Zapłać</button>
+          </div>
+          <div *ngIf="!orderserv.orderres.success">
+            <p class="servres">wystapił błąd</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="fullscreenback backimg backimgfixed"> </div>
+  </div>

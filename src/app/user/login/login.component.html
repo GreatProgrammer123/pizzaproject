@@ -1,0 +1,23 @@
+<app-appmenubar></app-appmenubar>
+<div style="overflow:hidden;">
+  <div class="contentwrapper elemspanel todown withentryanim">
+    <div class="wrap backcolor">
+      <p class="subttlemain subttlemainsmaller">Logowanie</p>
+      <mat-form-field class="example-full-width maininp">
+        <input type="text" placeholder="e-mail" aria-label="e-mail" matInput
+               [(ngModel)]="email">
+      </mat-form-field>
+      <br />
+      <mat-form-field class="example-full-width maininp">
+        <input type="password" placeholder="hasło" aria-label="hasło" matInput
+               [(ngModel)]="password">
+      </mat-form-field>
+      <br />
+      <button (click)="login()" class="btnmain blogin">Login</button>
+      <p *ngIf="type=='normaluser'" class="servres registerp">Jeśli nie masz konta <span [routerLink]="['/registernormaluser','']" class="gotoregisterspan">Zarejestruj się</span></p>
+      <p *ngIf="servres" class="servres registerp">{{servres.msg}}   <span *ngIf="servres.success==false" class="servres gotoregisterspan" [routerLink]="['/restorepassword',type]">Przypomnij hasło</span></p>
+
+    </div>
+  </div>
+  <div class="fullscreenback backimg backimgfixed"> </div>
+</div>

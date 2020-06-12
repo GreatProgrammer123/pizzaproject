@@ -1,0 +1,12 @@
+<div class="wrapper contentelemback">
+  <p class="minititlemain ap">{{pizzaorder.pizza.name}}&nbsp;&nbsp;</p>
+  <p class="vallable ap">Rozmiar: <span class="numpmain">{{pizzaorder.sizep.size}}cm</span>&nbsp;&nbsp;</p>
+  <p class="vallable ap">Ilość: <span class="numpmain">{{pizzaorder.count}}</span></p>
+
+  <div class="contentsmargin"> 
+    <p class="minititlemain">Dodatki</p>
+    <ng-container *ngFor="let toping of pizzaorder.topings">
+      <app-displaytopingorder [topingorder]="toping" [insideotherelem]="true"></app-displaytopingorder>
+    </ng-container>
+  </div>
+</div>

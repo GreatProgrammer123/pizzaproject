@@ -1,0 +1,49 @@
+.wrapper {
+  padding: 1%;
+  margin-top: 10px;
+  border-radius: 15px;
+  padding-top:10px;
+  transition-duration: 300ms;
+ 
+}
+
+  .wrapper:hover {
+    padding: 1.25%;
+    transition-duration: 300ms;
+    cursor:pointer;
+   
+  }
+
+.ap {
+  display: inline-block;
+ margin:0;
+}
+
+.pizzalists{
+  width:80%;
+}
+
+.datep{
+  width:20%;
+  text-align:right;
+}
+
+
+@media screen and (max-width: 500px) {
+  .wrapper {
+    padding: 2%;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding-top: 5px;
+    transition-duration: 300ms;
+    border-style: solid;
+  }
+
+  
+
+  
+}
+
+@media screen and (min-width: 500px) and (max-width: 1000px) {
+  
+}

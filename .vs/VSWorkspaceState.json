@@ -1,0 +1,23 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\admin",
+    "\\src\\app\\admin\\editmenu",
+    "\\src\\app\\admin\\editmenu\\menuelemseditable",
+    "\\src\\app\\admin\\editmenu\\menuelemseditable\\displaypizzaeditable",
+    "\\src\\app\\client",
+    "\\src\\app\\client\\orderpizza",
+    "\\src\\app\\client\\orderpizza\\menuelems",
+    "\\src\\app\\client\\orderpizza\\menuelems\\menu",
+    "\\src\\app\\client\\orderpizza\\menuserv",
+    "\\src\\app\\client\\welcomepage",
+    "\\src\\app\\user\\myaccount",
+    "\\src\\app\\user\\myaccount\\myaccount",
+    "\\src\\app\\util",
+    "\\src\\app\\worker\\workerpanel"
+  ],
+  "SelectedNode": "\\src\\app\\client\\orderpizza\\menuelems\\menu\\menu.component.ts",
+  "PreviewInSolutionExplorer": false
+}

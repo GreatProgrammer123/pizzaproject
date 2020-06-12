@@ -1,0 +1,25 @@
+<div class="contentwrapper">
+  <p class="subttlemain subttlemainsmaller">Rejestracja</p>
+  <mat-form-field class="example-full-width maininp">
+    <input type="text" placeholder="imię" aria-label="imię" matInput
+           [(ngModel)]="admin.name">
+  </mat-form-field>
+  <br />
+  <mat-form-field class="example-full-width maininp">
+    <input type="text" placeholder="nazwisko" aria-label="nazwisko" matInput
+           [(ngModel)]="admin.surname">
+  </mat-form-field>
+  <br />
+  <mat-form-field class="example-full-width maininp">
+    <input type="text" placeholder="email" aria-label="email" matInput
+           [(ngModel)]="admin.email">
+  </mat-form-field>
+  <br />
+  <mat-form-field class="example-full-width maininp">
+    <input type="password" placeholder="hasło" aria-label="hasło" matInput
+           [(ngModel)]="admin.password">
+  </mat-form-field>
+  <br />
+  <button (click)="register()" class="btnmain bregister">Zarejestruj</button>
+  <p *ngIf="servres" class="servres">{{servres}}</p>
+</div>

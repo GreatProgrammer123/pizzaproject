@@ -1,0 +1,16 @@
+<div class="contentwrapper">
+  <mat-form-field class="ordselect">
+    <mat-label>Status zamówienia</mat-label>
+    <mat-select [(ngModel)]="chosenstate" (ngModelChange)="stateselectionchange()" >
+      <mat-option *ngFor="let state of states" [value]="state.state">
+        {{state.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <p *ngIf="servres">{{servres}}</p>
+  <div>
+    <ng-container *ngFor="let order of orders">
+      <app-orderinlist [order]="order"></app-orderinlist>
+    </ng-container>
+  </div>
+</div>

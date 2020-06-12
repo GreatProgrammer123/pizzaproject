@@ -1,0 +1,31 @@
+<div *ngIf="menuserv.menu" class="contentwrapper">
+  <p class="subttlemain">Pizza</p>
+  <div class="contentsmargin contentmargin">
+    <button (click)="addnewpizza()" class="btnmain bnextmain btnadd">Dodaj</button>
+    <br />
+    <p *ngIf="newpizzamsg">{{newpizzamsg}}</p>
+    <ng-container *ngFor="let pizza of menuserv.menu.pizzas">
+      <app-displaypizzaeditable [pizza]="pizza"></app-displaypizzaeditable>
+    </ng-container>
+  </div>
+
+  <p class="subttlemain">Dodatki do pizzy</p>
+  <div class="contentsmargin contentmargin">
+    <button (click)="addnewtopping()"  class="btnmain bnextmain btnadd">Dodaj</button>
+    <br />
+    <p *ngIf="newtopingmsg">{{newtopingmsg}}</p>
+    <ng-container *ngFor="let toping of menuserv.menu.toppings">
+      <app-displaytopingeditable [toping]="toping" (removeemit)="removetoping($event)" (saved)="savedtoping($event)"></app-displaytopingeditable>
+    </ng-container>
+  </div>
+
+  <p class="subttlemain">Picie</p>
+  <div class="contentsmargin contentmargin">
+    <button (click)="addnewdrink()" class="btnmain bnextmain btnadd">Dodaj</button>
+    <br />
+    <p *ngIf="newdrinkmsg">{{newdrinkmsg}}</p>
+    <ng-container *ngFor="let drink of menuserv.menu.drinks">
+      <app-displaydrinkeditable [drink]="drink" (removeemit)="removedrink($event)" (saved)="saveddrinks($event)"></app-displaydrinkeditable>
+    </ng-container>
+  </div>
+</div>

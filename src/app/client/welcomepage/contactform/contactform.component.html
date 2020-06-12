@@ -1,0 +1,24 @@
+<div class="wrap contentelemback">
+  <mat-form-field class="example-full-width maininp inpsend">
+    <input type="text" placeholder="email" aria-label="email" matInput
+           [(ngModel)]="email">
+  </mat-form-field>
+  <br />
+  <mat-form-field class="example-full-width maininp inpsend">
+    <input type="text" placeholder="numer telefonu" aria-label="numer telefonu" matInput
+           [(ngModel)]="phonenumber">
+  </mat-form-field>
+  <br />
+  <mat-form-field class="example-full-width maininp inpsend">
+    <input type="text" placeholder="tytuł" aria-label="tytuł" matInput
+           [(ngModel)]="title">
+  </mat-form-field>
+  <br />
+  <mat-form-field class="example-full-width maininp inpsend">
+    <mat-label>Treść wiadomości</mat-label>
+    <textarea matInput [(ngModel)]="content" class="inpcontent"></textarea>
+  </mat-form-field>
+
+  <button (click)="sendmsg()" class="btnmain inpsend contentelembackbright">Wyślij</button>
+  <p *ngIf="servres" class="servres">{{servres}}</p>
+</div>

@@ -1,0 +1,21 @@
+<div class="wrapper">
+  <mat-form-field class="example-full-width maininp inp">
+    <input type="text" placeholder="nazwa" aria-label="nazwa" matInput
+           [(ngModel)]="sizeprice.name">
+  </mat-form-field>
+  <br />
+
+  <mat-form-field class="example-full-width maininp inp">
+    <input type="number" placeholder="Rozmiar(cm)" aria-label="Rozmiar(cm)" matInput
+           [(ngModel)]="sizeprice.size">
+  </mat-form-field>
+  <br />
+
+  <mat-form-field class="example-full-width maininp inp">
+    <input type="number" placeholder="Cena" aria-label="Cena" matInput
+           [(ngModel)]="sizeprice.price">
+  </mat-form-field>
+  <br />
+
+  <button (click)="removesp()" class="btnmain bdelete">Usuń</button>
+</div>

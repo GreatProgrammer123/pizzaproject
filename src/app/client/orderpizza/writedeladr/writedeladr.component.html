@@ -1,0 +1,39 @@
+
+<app-appmenubar></app-appmenubar>
+<div style="overflow:hidden;">
+  <div class="contentwrapper elemspanel todown withentryanim">
+    <div class="wrap">
+      <p class="subttlemain subttlemainsmaller">Wybierz miejsce odbioru</p>
+      <div class="contentsmargin">
+        <div class="atext chkb">
+          <mat-checkbox [(ngModel)]="orderserv.order.eathere">Zjem na miejscu</mat-checkbox>
+        </div>
+
+        <div *ngIf="!orderserv.order.eathere">
+         
+          <mat-radio-group aria-label="Select an option">
+            <mat-radio-button value="1" (click)="adrtypechanged(1)" [checked]="orderserv.adrtype==1" class="radioadrbtn atext">Wpisz adres</mat-radio-button>
+            <mat-radio-button value="2" (click)="adrtypechanged(2)" [checked]="orderserv.adrtype==2" class="radioadrbtn atext">Dodaj adres z konta</mat-radio-button>
+          </mat-radio-group>
+          <div>
+            <mat-form-field class="example-full-width maininp">
+              <input type="text" placeholder="ulica i numer" aria-label="ulica i numer" matInput
+                     [(ngModel)]="orderserv.order.deliveryaddres.street">
+            </mat-form-field>
+            <br />
+            <mat-form-field class="example-full-width maininp">
+              <input type="text" placeholder="miasto" aria-label="miasto" matInput
+                     [(ngModel)]="orderserv.order.deliveryaddres.city">
+            </mat-form-field>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <button (click)="prev()" class="btnmain btnnextprev">Wstecz</button>
+    <button (click)="next()" class="btnmain btnnextprev">Dalej</button>
+    <p *ngIf="servres" class="servres">{{servres}}</p>
+  </div>
+  <div class="fullscreenback backimg backimgfixed"> </div>
+  </div>

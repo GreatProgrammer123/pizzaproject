@@ -1,0 +1,39 @@
+<app-appmenubar></app-appmenubar>
+<div style="overflow:hidden;">
+  <div *ngIf="menuserv.menu" class="contentwrapper menurap">
+ 
+    <div class="elemspanel  toleft withentryanim">
+      <p *ngIf="menuserv.todayopenhours" class="openhours">
+        Godziny otwarcia <span class="numpmain numbigger">{{menuserv.todayopenhours.open.hour+":"+menuserv.todayopenhours.open.minute}}</span>
+        do  <span class="numpmain numbigger">{{menuserv.todayopenhours.close.hour+":"+menuserv.todayopenhours.close.minute}}</span>
+      </p>
+      <p class="subttlemain">Pizza</p>
+      <div class="menucontents">
+        <ng-container *ngFor="let pizza of menuserv.menu.pizzas">
+          <app-displaypizza [pizza]="pizza"></app-displaypizza>
+        </ng-container>
+      </div>
+    </div>
+    <div class="elemspanel toright  withentryanim">
+      <p class="subttlemain">Picie</p>
+      <div class="menucontents">
+        <ng-container *ngFor="let drink of menuserv.menu.drinks">
+          <app-displaydrink [drink]="drink"></app-displaydrink>
+        </ng-container>
+      </div>
+    </div>
+    <div class="elemspanel  todown withentryanim">
+      <p class="subttlemain">Inne dodatki</p>
+      <div class="menucontents">
+        <ng-container *ngFor="let toping of menuserv.menu.notintegraltopings">
+          <app-displaytoping [toping]="toping" ></app-displaytoping>
+        </ng-container>
+
+        <button (click)="next()" class="btnmain bnextmain bnext">Dalej</button>
+        <p *ngIf="servres" class="servres">{{servres}}</p>
+      </div>
+    </div>
+  </div>
+  <mat-spinner *ngIf="!menuserv.menu" class="waiterspinner" [diameter]="150"></mat-spinner>
+  <div class="fullscreenback backimg backimgfixed"> </div>
+</div>

@@ -1,0 +1,35 @@
+<div class="wrapper">
+ 
+  <div *ngIf="!openhours.closed">
+    <mat-form-field class="example-full-width maininp">
+      <input type="text" placeholder="dzień tygodnia" aria-label="dzień tygodnia" matInput
+             [matAutocomplete]="dayautocmp" [(ngModel)]="openhours.day"
+             (click)="wkdays.daysautocomp('');"
+             (ngModelChange)="wkdays.daysautocomp($event);addday()">
+      <mat-autocomplete #dayautocmp="matAutocomplete" [displayWith]="">
+        <mat-option *ngFor="let day of wkdays.filtereddays" [value]="day" class="">
+          {{day}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+    <br />
+    <mat-form-field class="example-full-width maininp">
+      <input type="time" placeholder="otwarcie" aria-label="otwarcie" matInput
+             [(ngModel)]="openhours.open">
+    </mat-form-field>
+    <br />
+    <mat-form-field class="example-full-width maininp">
+      <input type="time" placeholder="zamkniecie" aria-label="zamkniecie" matInput
+             [(ngModel)]="openhours.close">
+    </mat-form-field>
+    <br />
+    </div>
+
+      <mat-checkbox [(ngModel)]="openhours.closed" class="maininp">zamknięte</mat-checkbox>
+      <br />
+      <button (click)="save()" class="btnmain btnsave">Zapisz</button>
+      <br />
+      <button (click)="remove()" class="btnmain btnsave">Usuń</button>
+      <br />
+      <p *ngIf="servres" class="servres">{{servres}}</p>
+    </div>

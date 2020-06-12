@@ -1,0 +1,30 @@
+<div class="wrapper contentelemback">
+  <div (click)="clickonwrapper()" class="pizzaheader">
+    <p class="smalltitlemain pizzatitle">{{pizza.name}} <span *ngIf="pizzaorder.count>0" class="incartinfo"> w koszyku!</span></p>
+    <p class="wordlistp atext">{{pizza.ingredients}}</p>
+  </div>
+  <div id="extendablewrapper" [@extendanim]="extendanimstate">
+    <div class="sizespwrapper">
+      <ng-container *ngFor="let sizep of pizza.availablesizes">
+        <div  class="sizep">
+          <app-displaysizeprice [sizep]="sizep" (choosesp)="choosesp($event)"></app-displaysizeprice>
+        </div>
+      
+      </ng-container>
+    </div>
+    <div class="topoingswrap">
+      <ng-container *ngFor="let toping of menuserv.menu.toppings">
+        <app-displaytoping [toping]="toping" [pizzaid]="pizza.pizzaid" (topingchanged)="topingchanged($event)" [insideotherelem]="true"></app-displaytoping>
+      </ng-container>
+    </div>
+
+    <p class="minititlemain countp">Ilość: </p>
+    &nbsp;
+    <mat-form-field class="example-full-width maininp countinp">
+      <input type="number" placeholder="Ilość" aria-label="Ilość" matInput
+             [(ngModel)]="pizzaorder.count" (ngModelChange)="addtoorder()">
+    </mat-form-field>
+    &nbsp;
+    <span class="numpmain">{{pizzaorder.cost}}zł</span>
+  </div>
+</div>

@@ -1,0 +1,68 @@
+.wrap{
+  margin-left:25%;
+}
+
+.blogin {
+  width: 50%;
+}
+
+.registerp{
+  width:50%;
+  text-align:center;
+}
+
+.gotoregisterspan{
+ 
+  color:blue;
+}
+
+.gotoregisterspan:hover{
+  cursor:pointer;
+}
+
+
+@media screen and (max-width: 500px) {
+  .wrap {
+    margin-left: 15%;
+  }
+
+  .blogin {
+    width: 80%;
+  }
+
+  .registerp {
+    width: 80%;
+    text-align: center;
+  }
+
+  .gotoregisterspan {
+    color: blue;
+  }
+
+    .gotoregisterspan:hover {
+      cursor: pointer;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 1000px) {
+  .wrap {
+    margin-left: 15%;
+  }
+
+  .blogin {
+    width: 80%;
+  }
+
+  .registerp {
+    width: 80%;
+    text-align: center;
+  }
+
+  .gotoregisterspan {
+    color: blue;
+  }
+
+    .gotoregisterspan:hover {
+      cursor: pointer;
+    }
+}

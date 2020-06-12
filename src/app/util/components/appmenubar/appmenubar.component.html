@@ -1,0 +1,8 @@
+<div id="menuwrap" class="menu menusticky menuopacited">
+  <p class="apptitle" [routerLink]="''">PizzaProject</p>
+  <div class="btnswrapper">
+    <button [routerLink]="'/menu'" class="menubtn" mat-button>Zamów</button>
+    <button *ngIf="!userserv.normaluser" [routerLink]="['/login','normaluser']" class="menubtn" mat-button>Zaloguj się</button>
+    <button *ngIf="userserv.normaluser" [routerLink]="['/myaccount']" class="menubtn" mat-button>Moje konto</button>
+  </div>
+</div>

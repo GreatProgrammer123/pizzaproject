@@ -1,0 +1,97 @@
+.menurap{
+  padding-top:200px;
+}
+
+.menucontents {
+  padding-left: 1%;
+  margin-top: 40px;
+  margin-bottom: 80px;
+ 
+}
+
+.bnext {
+  margin-top: 20px;
+  margin-left: 6%;
+}
+
+.openhours{
+  width:100%;
+  text-align:center;
+  font-size:1.1vw;
+  margin-bottom:20px;
+}
+
+.numbigger{
+  font-size:1.2vw;
+}
+
+.waiterspinner{
+  margin-left:45%;
+  margin-top:200px;
+}
+
+@media screen and (max-width: 500px) {
+  .menurap {
+    padding-top: 200px;
+  }
+
+  .menucontents {
+    padding-left: 2%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .bnext {
+    margin-top: 10px;
+    margin-left: 6%;
+  }
+
+  .openhours {
+    width: 100%;
+    text-align: center;
+    font-size: 3.1vw;
+    margin-bottom: 5px;
+  }
+
+  .numbigger {
+    font-size: 3.2vw;
+  }
+
+  .waiterspinner {
+    margin-left: 45%;
+    margin-top: 200px;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 1000px) {
+  .menurap {
+    padding-top: 400px;
+  }
+
+  .menucontents {
+    padding-left: 2%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .bnext {
+    margin-top: 10px;
+    margin-left: 6%;
+  }
+
+  .openhours {
+    width: 100%;
+    text-align: center;
+    font-size: 2.8vw;
+    margin-bottom: 25px;
+  }
+
+  .numbigger {
+    font-size: 3vw;
+  }
+
+  .waiterspinner {
+    margin-left: 45%;
+    margin-top: 200px;
+  }
+}

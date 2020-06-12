@@ -1,0 +1,23 @@
+<div class="contentwrapper">
+  <mat-form-field class="datpick">
+    <mat-label>Początek</mat-label>
+    <input matInput [matDatepicker]="startpicker" [(ngModel)]="startdate"  (ngModelChange)="downloadorders()">
+    <mat-datepicker-toggle matSuffix [for]="startpicker"></mat-datepicker-toggle>
+    <mat-datepicker #startpicker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field class="datpick">
+    <mat-label>Koniec</mat-label>
+    <input matInput [matDatepicker]="endpicker" [(ngModel)]="enddate"  (ngModelChange)="downloadorders()">
+    <mat-datepicker-toggle matSuffix [for]="endpicker"></mat-datepicker-toggle>
+    <mat-datepicker #endpicker></mat-datepicker>
+  </mat-form-field>
+
+  <div>
+    <ng-container *ngFor="let order of orders">
+      <app-orderinlist [order]="order"></app-orderinlist>
+    </ng-container>
+
+  </div>
+
+</div>

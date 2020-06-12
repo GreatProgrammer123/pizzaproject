@@ -1,0 +1,79 @@
+.radioadrbtnpay {
+  margin-top:5px;
+  font-size: 1vw;
+  padding: 1%;
+}
+
+.btnorderpay {
+  width: 40%;
+  margin-top:10px;
+}
+
+.faduotubtn{
+  opacity:0;
+  transition-duration:300ms;
+}
+
+.waiterspinner{
+  margin-left:15%;
+}
+
+.topayp{
+  padding-left:1%;
+  font-size:1.1vw;
+  margin-top:30px;
+}
+
+@media screen and (max-width: 500px) {
+  .wrap{
+    margin-left:10%;
+  }
+
+  .radioadrbtnpay {
+    margin-top: 0;
+    font-size: 3vw;
+    padding: 1%;
+  }
+
+  .btnorderpay {
+    width: 90%;
+    margin-top: 10px;
+  }
+
+  .waiterspinner {
+    margin-left: 15%;
+  }
+
+  .topayp {
+    padding-left: 1%;
+    font-size: 3.2vw;
+    margin-top: 5px;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 1000px) {
+  .wrap {
+    margin-left: 10%;
+  }
+
+  .radioadrbtnpay {
+    margin-top: 0;
+    font-size: 2.8vw;
+    padding: 1%;
+  }
+
+  .btnorderpay {
+    width: 90%;
+    margin-top: 15px;
+  }
+
+  .waiterspinner {
+    margin-left: 15%;
+  }
+
+  .topayp {
+    padding-left: 1%;
+    font-size: 3vw;
+    margin-top: 20px;
+  }
+}

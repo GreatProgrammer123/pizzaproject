@@ -1,0 +1,18 @@
+<div class="wrapper contentelemback">
+  <p class="minititlemain tpp">{{drink.name}}</p>
+  &nbsp;
+  <p class="volumep tpp">{{drink.volume}}ml</p>
+  &nbsp;
+  <mat-form-field class="example-full-width tpp maininp numinpmain">
+    <input type="number" placeholder="Ilość" aria-label="Ilość" matInput
+           [(ngModel)]="drinkorder.count" (ngModelChange)="changedcount()">
+  </mat-form-field>
+  &nbsp;
+  <p class="tpp numpmain">{{drinkorder.cost}}zł</p>
+  &nbsp;
+
+</div>
+
+
+
+

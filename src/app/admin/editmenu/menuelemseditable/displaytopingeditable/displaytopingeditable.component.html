@@ -1,0 +1,21 @@
+<div class="wrapper">
+  <mat-form-field class="example-full-width maininp">
+    <input type="text" placeholder="nazwa" aria-label="nazwa" matInput
+           [(ngModel)]="toping.name">
+  </mat-form-field>
+  <br />
+  <mat-form-field class="example-full-width maininp">
+    <mat-label>Opis</mat-label>
+    <textarea matInput [(ngModel)]="toping.description"></textarea>
+  </mat-form-field>
+  <br />
+  <mat-form-field class="example-full-width maininp">
+    <input type="number" placeholder="cena" aria-label="cena" matInput
+           [(ngModel)]="toping.price">
+  </mat-form-field>
+  <br />
+  <mat-checkbox [(ngModel)]="toping.notpizzaintegrated" class="maininp">może zamówić osobno</mat-checkbox> <br />
+  <button (click)="save()" class="btnmain btnsave">Zapisz</button>
+  <button (click)="remove()" class="btnmain btnsave">Usuń</button>
+  <p *ngIf="servres">{{servres}}</p>
+</div>

@@ -1,0 +1,26 @@
+
+.wrap {
+  margin-left: 25%;
+}
+.bregister{
+  width:50%;
+}
+@media screen and (max-width: 500px) {
+  .wrap {
+    margin-left: 15%;
+  }
+
+  .bregister {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 1000px) {
+  .wrap {
+    margin-left: 15%;
+  }
+
+  .bregister {
+    width: 80%;
+  }
+}

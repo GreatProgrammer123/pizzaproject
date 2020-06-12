@@ -1,0 +1,15 @@
+.ordselect {
+  width: 100%;
+  font-size:1vw;
+}
+@media screen and (max-width: 500px) {
+  .ordselect {
+    font-size: 3.5vw;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 1000px) {
+  .ordselect {
+   font-size: 2.8vw;
+  }
+}
